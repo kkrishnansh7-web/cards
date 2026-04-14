@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creative Cards - Handmade Gift Cards</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <!-- FIXED: Changed path to remove space and ensure visibility -->
+      <img src="logo-krish.jpeg" alt="Creative Cards" class="nav-logo" />
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#occasions">Occasions</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#order" class="nav-order-btn">Order a card</a></li>
+      </ul>
+      <button class="burger" id="burger">☰</button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="#about">About</a>
+      <a href="#occasions">Occasions</a>
+      <a href="#how">How it works</a>
+      <a href="#order">Order a card</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-text">
+      <p class="hero-eyebrow">hi there </p>
+      <h1>Handmade cards<br>for the people<br>you actually care about.</h1>
+      <p class="hero-desc">
+        College student from Delhi making gift cards entirely by hand.
+      </p>
+      <a href="#order" class="btn-main">Get your card made →</a>
+    </div>
+    <div class="hero-visual">
+      <div class="card-stack">
+        <div class="mock-card mc-back">
+          <span class="mc-hand">Happy Birthday!</span>
+        </div>
+        <div class="mock-card mc-front">
+          <img src="logo-krish.jpeg" alt="Creative Cards logo" class="mock-logo" />
+          <p class="mock-note">"Made just for you"</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="order-section" id="order">
+    <div class="container">
+      <div class="order-wrap">
+        <div class="order-left">
+          <h2>Let's make your card.</h2>
+          <div class="contact-links">
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://wa.me" target="_blank">WhatsApp me</a>
+          </div>
+        </div>
+        <div class="order-right">
+          <form id="orderForm">
+            <div class="field">
+              <label for="fname">Your name</label>
+              <input type="text" id="fname" placeholder="e.g. Sneha" required />
+            </div>
+            <div class="field">
+              <label for="occasion">Occasion</label>
+              <select id="occasion" required>
+                <option value="" disabled selected>What's the card for?</option>
+                <option>Birthday</option>
+                <option>Anniversary</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-main">Send Order</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Menu toggle for mobile
+    document.getElementById('burger').onclick = function() {
+        document.getElementById('navMobile').classList.toggle('open');
+    };
+  </script>
+</body>
+</html>
